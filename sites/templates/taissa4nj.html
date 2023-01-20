@@ -32,14 +32,14 @@
         </nav>
         <!-- Header-->
         <header class="masthead text-white">
-            <div class="masthead-content">
+            <div class="masthead-content row">
                 <div class="container px-5 text-left">
                     <h1 class="masthead-heading mb-0">Taissa Turner</h1>
                     <h2 class="masthead-subheading mb-0">Democratic Candidate for NJ-13</h2>
                     <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
                 </div>
-                <div class="overlay">
-                    <img src="" alt="NJ-13 MAP">
+                <div class="overlay col-lg-6">
+                    <img src="{{ url_for('static', filename='assets/NJ_13.png')}}" alt="NJ-13 MAP" class="img-fluid">
                 </div>
             </div>
         </header>

@@ -11327,12 +11327,7 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-}
-header.masthead .masthead-content .masthead-heading {
-  font-size: 4rem;
-}
-header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem;
+  z-index: 1;
 }
 @media (min-width: 992px) {
   header.masthead {
@@ -11341,11 +11336,17 @@ header.masthead .masthead-content .masthead-subheading {
   }
   header.masthead .masthead-content .masthead-heading {
     font-size: 6rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
   }
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 .overlay{
-
+    position: absolute;
+    z-index: -1;
+    max-height: 40%;
 }
