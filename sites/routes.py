@@ -1,5 +1,6 @@
 from flask import render_template
 from sites import app
+import json
 
 
 @app.route("/")
@@ -9,4 +10,7 @@ def home():
 
 @app.route("/taissa4nj")
 def taissa4nj():
-    return render_template("taissa4nj.html")
+    data = []
+    with open("sites/content/taissa_info.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("taissa4nj.html", details=data)
