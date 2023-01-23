@@ -45,7 +45,19 @@
                 </div>
             </div>
         </header>
-        
+        <!-- main content -->
+        {% for detail in details %}
+            {% if loop.index == 1 %}
+                <ul>
+                    <li>{{detail.article.0}}</li>
+                </ul>
+            {% endif %}
+                <h3>{{detail.headings}} </h3>
+                <p>{{ detail.article }}</p>
+                {% if loop.index != 3  %}
+                <hr>
+                {% endif %}
+        {% endfor %}
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Paid for by the Democratic Party of New Jersey &copy; Taissa Turner 2021</p></div>
