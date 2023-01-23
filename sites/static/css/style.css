@@ -11345,8 +11345,10 @@ header.masthead {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-.overlay{
+#nj-image{
     position: absolute;
+    top: 20px;
+    right: 60px;
     z-index: -1;
-    max-height: 40%;
+    max-height:700px;
 }
