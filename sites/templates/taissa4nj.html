@@ -48,15 +48,19 @@
         <!-- main content -->
         {% for detail in details %}
             {% if loop.index == 1 %}
+                <h3>{{detail.headings}}</h3>
                 <ul>
-                    <li>{{detail.article.0}}</li>
+                    {% for n in detail.article %}
+                    <li>{{detail.article.n}}</li>
+                    {% endfor %}
                 </ul>
-            {% endif %}
+            {% else %}
                 <h3>{{detail.headings}} </h3>
                 <p>{{ detail.article }}</p>
                 {% if loop.index != 3  %}
                 <hr>
                 {% endif %}
+            {% endif %}
         {% endfor %}
         <!-- Footer-->
         <footer class="py-5 bg-black">
