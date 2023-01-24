@@ -41,27 +41,32 @@
                     <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
                 </div>
                 <div class="overlay">
-                    <img id= "nj-image" src="{{ url_for('static', filename='assets/nj-state-map.png')}}" alt="NJ-13 MAP" class="img-fluid">
+                    <img id= "nj-image" src="https://www.tvinsider.com/wp-content/uploads/2022/02/yellowjackets-season-1-adult-taissa-1014x570.jpg" alt="NJ-13 MAP" class="img-fluid">
                 </div>
             </div>
         </header>
         <!-- main content -->
-        {% for detail in details %}
-            {% if loop.index == 1 %}
-                <h3>{{detail.headings}}</h3>
-                <ul>
-                    {% for n in detail.article %}
-                    <li>{{detail.article.n}}</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <h3>{{detail.headings}} </h3>
-                <p>{{ detail.article }}</p>
-                {% if loop.index != 3  %}
-                <hr>
+            <!-- json content -->
+            {% for detail in details %}
+            <div class="container-lg">
+                {% if loop.index == 1 %}
+                    <h3>{{detail.headings}}</h3>
+                    <ul>
+                        <li>{{ tais_goals[0] }}</li>
+                        <li>{{ tais_goals[1] }}</li>
+                        <li>{{ tais_goals[2] }}</li>
+                    </ul>
+                    <hr>
+                {% else %}
+                    <h3>{{detail.headings}} </h3>
+                    <p>{{ detail.article }}</p>
+                    {% if loop.index != 3  %}
+                    <hr>
+                    {% endif %}
                 {% endif %}
-            {% endif %}
-        {% endfor %}
+            </div>
+            {% endfor %}
+            
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Paid for by the Democratic Party of New Jersey &copy; Taissa Turner 2021</p></div>

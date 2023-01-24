@@ -11,6 +11,8 @@ def home():
 @app.route("/taissa4nj")
 def taissa4nj():
     data = []
+    goals = []
     with open("sites/content/taissa_info.json", "r") as json_data:
         data = json.load(json_data)
-    return render_template("taissa4nj.html", details=data)
+        goals = data[0]['article']
+    return render_template("taissa4nj.html", details=data, tais_goals=goals)
