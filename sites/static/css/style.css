@@ -11352,3 +11352,15 @@ header.masthead {
     z-index: -1;
     max-height:700px;
 }
+#support-section{
+  width:70%;
+  margin:auto;
+  border: solid 3px var(--bs-gray);
+  border-radius: 5%;
+}
+#displayed-user, #displayed-message{
+  display: inline-block;
+}
+.support-form{
+  display: inline-block;
+}
